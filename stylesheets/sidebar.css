@@ -2,16 +2,19 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   width: 300px;
   height: 100%;
   border-right: 1px solid lightgrey;
+  z-index: 1;
   overflow: hidden;
 }
 
 .sidebarMenu {
   width: calc(100% + 20px);
+  /*padding-right: 20px;*/
   height: 100%;
+  padding-top: 10px;
+  padding-bottom: 70px;
   overflow-y: scroll;
 }
 
@@ -20,9 +23,9 @@
   height: 50px;
 }
 
-/*.sidebarMenuItem {
+.sidebarMenuItem:hover {
   height: auto;
-}*/
+}
 
 .sidebarMenuItem:hover .sidebarSubmenu {
   display: block;
@@ -42,15 +45,24 @@
 
 .sidebarMenuItem::before {
   position: absolute;
-  display: block;
   top: 0;
   left: 10px;
+  z-index: 1;
+  display: block;
   width: 40px;
   height: 50px;
   line-height: 50px;
   font-size: 20px;
   font-family: FontAwesome;
   text-align: center;
+}
+
+.sidebarModeMenu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+  background-color: white;
 }
 
 .sidebarMenuItem.apple::before      {content: '\f179';}
@@ -60,9 +72,7 @@
 .sidebarMenuItem.youtube::before    {content: '\f167';}
 .sidebarMenuItem.tumblr::before     {content: '\f173';}
 .sidebarMenuItem.telegram::before   {content: '\f2c6';}
-.sidebarMenuItem.twitter::before    {content: '\f099';}
-.sidebarMenuItem.vine::before       {content: '\f1ca';}
-.sidebarMenuItem.windows::before    {content: '\f17a';}
+
 
 .sidebarSubmenu {
   display: none;
@@ -78,6 +88,6 @@
   background: lightgrey;
 }
 
-.sidebarSubmenuItem:first-child {
-display: none;
+.sidebarSubmenuHeader {
+  display: none;
 }
