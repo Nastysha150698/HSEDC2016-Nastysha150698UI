@@ -29,6 +29,10 @@
   /*padding-bottom: 60px;*/
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
   background: white;
+}
+
+.compact .sidebarSubmenuWrapper {
+  position: relative;
   overflow: hidden;
 }
 
